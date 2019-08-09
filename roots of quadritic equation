@@ -9,11 +9,14 @@ class roots
      int b=sc.nextInt();
      int c=sc.nextInt();
      int e= b*b-4*a*c;
-     double d= Math.sqrt(e);
+     if(e<0)
+     { 	System.out.println("imaginary roots") ;}
+     else
+     { double d= Math.sqrt(e);
      int root1=(-(b)+e)/2*a;
      int root2=(-(b)-e)/2*a;
-     System.out.println("the roots are "+root1+"and"+root2 ) ;
+     System.out.println("the roots are "+root1+"and"+root2 ) ;}
   } 
      
      
-}  	
+}  	  	 
