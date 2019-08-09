@@ -1,0 +1,19 @@
+import java.util.* ;
+class roots
+{
+  public static void main(String args[] )
+  {
+     Scanner sc = new Scanner(System.in) ;
+     System.out.println("type in the values of a,b,c, as in ax^2+bx+c") ;
+     int a=sc.nextInt() ;
+     int b=sc.nextInt();
+     int c=sc.nextInt();
+     int e= b*b-4*a*c;
+     double d= Math.sqrt(e);
+     int root1=(-(b)+e)/2*a;
+     int root2=(-(b)-e)/2*a;
+     System.out.println("the roots are "+root1+"and"+root2 ) ;
+  } 
+     
+     
+}  	
