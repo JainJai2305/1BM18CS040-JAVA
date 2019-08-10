@@ -1,0 +1,28 @@
+import java.util.* ;
+class Primenumbers
+{ public static void main(String args[])  
+	{
+		System.out.println("enter the value of n") ;
+        
+	
+	     Scanner sc=new Scanner(System.in) ;
+	     int n=sc.nextInt() ;	
+        
+	int a=0 ;
+	int num=3 ;
+	int count=0 ;
+	while(a<n)
+	{count=0 ;
+	 for(int x=1;x<=num/2;x++)
+	  {if(num%x==0)
+            {count++;}
+	  }
+	  if(count<2)
+          {System.out.println(num) ; 		 	
+	   a++ ;
+	  }
+	  num++ ;
+	 }
+	} 	
+}	   
+ 	
