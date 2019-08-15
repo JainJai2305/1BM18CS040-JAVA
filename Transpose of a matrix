@@ -1,0 +1,23 @@
+import java.util.* ;
+class Transpose
+{  public static void main(String args[])
+	{ System.out.println("enter the size of the matrix\n") ;
+	  Scanner sc=new Scanner(System.in) ;
+	  int n=sc.nextInt() ;
+	  int m=sc.nextInt() ;
+	  int[][]arr=new int[n][m] ;
+   
+          System.out.println("enter the elements in the matrix\n") ;
+	  for(int x=0;x<n;x++)
+	  {  for(int y=0;y<m;y++)
+	     { arr[x][y]=sc.nextInt() ;}
+          }
+
+       	  System.out.println("the transpose of the matrix is:\n") ;  
+	  for(int x=0;x<m;x++)
+	  {  for(int y=0;y<n;y++)
+	     { System.out.println(arr[x][y]) ;}
+	     System.out.println("\n") ;  
+          }
+	}
+}
