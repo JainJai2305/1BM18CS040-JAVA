@@ -1,0 +1,45 @@
+import java.util.* ;
+class Secondlargest
+{public static void main(String args[])
+	{System.out.println("enter the size of the array\n") ;
+	 Scanner sc=new Scanner(System.in) ;
+	  int n=sc.nextInt() ;
+
+  	  int[]arr=new int[n] ;
+	  
+	  System.out.println("enter array elments \n") ;
+	  for(int x=0;x<n;x++)
+	  { arr[x]=sc.nextInt() ;}
+
+	  for(int x=0;(x+3)<n;x++)
+	  {if(arr[x]>arr[x+3])
+	   {int temp=arr[x] ;
+	    arr[x]=arr[x+3] ;
+	    arr[x+3]=temp ;
+	   }
+	  } 
+	  for(int x=0;(x+2)<n;x++)
+	  {if(arr[x]>arr[x+2])
+	   {int temp=arr[x] ;
+	    arr[x]=arr[x+2] ;
+	    arr[x+2]=temp ;
+	   }
+	  }
+	  for(int x=0;(x+1)<n;x++)
+	  {if(arr[x]>arr[x+1])
+	   {int temp=arr[x] ;
+	    arr[x]=arr[x+1] ;
+	    arr[x+1]=temp ;
+	   }
+	  }
+	  
+	  int max=arr[n-1] ;
+	  int count=0 ;
+	  
+     	  for(int x=0;x<n;x++)
+	  {if(arr[x]==max)
+	   {count++ ;}	
+	  }
+	  System.out.println(arr[n-1-count]) ;
+	}
+}
