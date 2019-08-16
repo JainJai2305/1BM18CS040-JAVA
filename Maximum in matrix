@@ -1,0 +1,27 @@
+import java.util.* ;
+class Maximuminmatrix
+{	public static void main(String args[])
+	{Scanner sc=new Scanner(System.in) ;
+	 System.out.println("enter the number of rows and clumns of matrix\n") ;
+	 
+	 int n=sc.nextInt() ;
+	 int m=sc.nextInt() ;
+	 int[][] matrix=new int[n][m] ;
+	
+	 System.out.println("enter the elements of matrix1\n") ;
+	 for (int x=0;x<n;x++)
+	 { for(int y=0;y<m;y++)
+	   { matrix[x][y]= sc.nextInt() ;}
+	 }
+
+	 int max = -100000 ; 
+	 for (int x=0;x<n;x++)
+	 { for(int y=0;y<m;y++)
+	   {if(matrix[x][y]>max)
+	     {max=matrix[x][y] ;}
+	   }
+	 }
+
+	System.out.println("the largest element is\n"+max) ;
+	}
+}
