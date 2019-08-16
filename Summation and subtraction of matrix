@@ -1,0 +1,36 @@
+import java.util.* ;
+class Summationandsubtractionofmatrix
+{	public static void main(String args[])
+	{Scanner sc=new Scanner(System.in) ;
+	 System.out.println("enter the number of rows and clumns of matrix\n") ;
+	 
+	 int n=sc.nextInt() ;
+	 int m=sc.nextInt() ;
+	 int[][] matrix1=new int[n][m] ;
+	 int[][] matrix2=new int[n][m] ;
+
+	 System.out.println("enter the elements of matrix1\n") ;
+	 for (int x=0;x<n;x++)
+	 { for(int y=0;y<m;y++)
+	   { matrix1[x][y]= sc.nextInt() ;}
+	 } 
+	     
+	 System.out.println("enter the elements of matrix2\n") ;
+	 for (int x=0;x<n;x++)
+	 { for(int y=0;y<m;y++)
+	   { matrix2[x][y]= sc.nextInt() ;}
+	 } 
+
+	System.out.println("the summation of elements of matrix is\n") ;
+	for (int x=0;x<n;x++)
+	 { for(int y=0;y<m;y++)
+	   { System.out.println(matrix1[x][y]+matrix2[x][y]) ;}
+	 }
+
+	System.out.println("the subtraction of elements of matrix is\n") ;
+	for (int x=0;x<n;x++)
+	 { for(int y=0;y<m;y++)
+	   { System.out.println(matrix1[x][y]-matrix2[x][y]) ;}
+	 } 
+	}
+}
