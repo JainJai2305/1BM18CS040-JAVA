@@ -15,10 +15,10 @@ class Maximuminmatrix
 	 }
 
 	 int max = -100000 ; 
-	 for (int x=0;x<n;x++)
-	 { for(int y=0;y<m;y++)
-	   {if(matrix[x][y]>max)
-	     {max=matrix[x][y] ;}
+	 for (int a[]:matrix)
+	 { for(int x:a)
+	   {if(x>max)
+	     {max=x ;}
 	   }
 	 }
 
