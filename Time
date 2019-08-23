@@ -1,0 +1,143 @@
+import java.util.* ;
+class Time1
+{ 
+ int h;int m;int s ;
+ Time1(int a,int b,int c)
+ {
+	h=a ;
+	m=b ;
+	s=c ;
+ }
+ Time1()
+ {
+	h=0 ;
+	m=0 ;
+	s=0 ;
+ }
+ void currenttime(int a,int b,int c)
+ {
+	h=a ;
+	m=b ;
+	s=c ;
+ }
+ void advance(int a,int b,int c)
+ {
+	s=s+c ;
+	m=m+b+(s/60) ;
+	s=s%60 ;
+	h=h+a+(m/60) ;
+	m=m%60 ;
+	h=h%24 ;
+ }
+ void print()
+ {
+	System.out.println("hour= "+h+"\n") ;
+	System.out.println("min= "+m+"\n") ;
+	System.out.println("second= "+s+"\n") ;import java.util.* ;
+class Time1
+{ 
+ int h;int m;int s ;
+ Time1(int a,int b,int c)
+ {
+	h=a ;
+	m=b ;
+	s=c ;
+ }
+ Time1()
+ {
+	h=0 ;
+	m=0 ;
+	s=0 ;
+ }
+ void currenttime(int a,int b,int c)
+ {
+	h=a ;
+	m=b ;
+	s=c ;
+ }
+ void advance(int a,int b,int c)
+ {
+	s=s+c ;
+	m=m+b+(s/60) ;
+	s=s%60 ;
+	h=h+a+(m/60) ;
+	m=m%60 ;
+	h=h%24 ;
+ }
+ void print()
+ {
+	System.out.println("hour= "+h+"\n") ;
+	System.out.println("min= "+m+"\n") ;
+	System.out.println("second= "+s+"\n") ;
+ }
+}
+class Time
+{
+ public static void main(String args[])
+ {
+	Scanner sc=new Scanner(System.in) ;
+	int ch ;
+	System.out.println("enter your choice \n") ;
+	ch=sc.nextInt() ;
+	switch(ch)
+	{
+	 case 1: Time1 a=new Time1() ;
+	 System.out.println("enter hour, miute and seconds\n") ;
+	 int hh =sc.nextInt() ;
+	 int mm =sc.nextInt() ;
+	 int ss =sc.nextInt() ;
+	 a.currenttime(hh,mm,ss) ;
+	 a.print() ;
+	 break ;
+ 	 case 2 :
+	 System.out.println("enter hour, miute and seconds\n") ;
+	 int hh1 =sc.nextInt() ;
+	 int mm1 =sc.nextInt() ;
+	 int ss1 =sc.nextInt() ;
+	 Time1 b=new Time1(hh1,mm1,ss1) ;
+	 System.out.println("enter hour, miute and seconds\n") ;
+	 int hh2 =sc.nextInt() ;
+	 int mm2 =sc.nextInt() ;
+	 int ss2 =sc.nextInt() ;
+	 b.advance(hh2,mm2,ss2) ;
+	 b.print() ;
+	 break ;
+	}
+ }
+}
+ }
+}
+class Time
+{
+ public static void main(String args[])
+ {
+	Scanner sc=new Scanner(System.in) ;
+	int ch ;
+	System.out.println("enter your choice \n") ;
+	ch=sc.nextInt() ;
+	switch(ch)
+	{
+	 case 1: Time1 a=new Time1() ;
+	 System.out.println("enter hour, miute and seconds\n") ;
+	 int hh =sc.nextInt() ;
+	 int mm =sc.nextInt() ;
+	 int ss =sc.nextInt() ;
+	 a.currenttime(hh,mm,ss) ;
+	 a.print() ;
+	 break ;
+ 	 case 2 :
+	 System.out.println("enter hour, miute and seconds\n") ;
+	 int hh1 =sc.nextInt() ;
+	 int mm1 =sc.nextInt() ;
+	 int ss1 =sc.nextInt() ;
+	 Time1 b=new Time1(hh1,mm1,ss1) ;
+	 System.out.println("enter hour, miute and seconds\n") ;
+	 int hh2 =sc.nextInt() ;
+	 int mm2 =sc.nextInt() ;
+	 int ss2 =sc.nextInt() ;
+	 b.advance(hh2,mm2,ss2) ;
+	 b.print() ;
+	 break ;
+	}
+ }
+}
