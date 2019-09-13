@@ -3,6 +3,20 @@ class Persons
 {
 	String name , add ;
 	int age ;
+	
+	
+}
+class Student extends Persons
+{
+	int rno ;
+	int sem ;
+	
+	
+}
+class Exam extends Student
+{
+	int marks1,marks2 ;
+	float avg=(marks1+marks2)/2 ;
 	Scanner sc=new Scanner(System.in) ;
 	void input()
 	{
@@ -12,28 +26,13 @@ class Persons
 		add=sc.next() ;
 		System.out.println("enter the age:\n") ;
 		age=sc.nextInt() ;
-	}
-}
-class Student extends Person
-{
-	int rno ;
-	int sem ;
-	void input0()
-	{
 		System.out.println("enter the roll no.:\n") ;
 		rno=sc.nextInt() ;
 		System.out.println("enter the semester:\n") ;
 		sem=sc.nextInt() ;
-	}
-}
-class Exam extends Student
-{
-	int marks1,marks2 ;
-	float avg=(marks1+marks2)/2 ;
-	void input1()
-	{
 		System.out.println("enter the marks in sub1:\n") ;
 		marks1=sc.nextInt() ;
+		System.out.println("enter the marks in sub2:\n") ;
 		marks2=sc.nextInt() ;
 	}
 	
@@ -53,13 +52,12 @@ class Person
 		Exam arr[]=new Exam[n] ;
 		for(int x=0;x<n;x++)
 		{
-			arr[i]=new Exam() ;
+			arr[x]=new Exam() ;
 		}
-		for(int x=0;x<n;x++)
+		for(int i=0;i<n;i++)
 		{
 			arr[i].input() ;
-			arr[i].input0() ;
-			arr[i].input1() ;
+
 		}
 	}
 }
