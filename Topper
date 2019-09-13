@@ -1,0 +1,66 @@
+import java.util.* ;
+class Persons
+{
+	String name , add ;
+	int age ;
+	Scanner sc=new Scanner(System.in) ;
+	void input()
+	{
+		System.out.println("enter the name:\n") ;
+		name=sc.next() ;
+		System.out.println("enter the address :\n") ;
+		add=sc.next() ;
+		System.out.println("enter the age:\n") ;
+		age=sc.nextInt() ;
+	}
+}
+class Student extends Person
+{
+	int rno ;
+	int sem ;
+	void input0()
+	{
+		System.out.println("enter the roll no.:\n") ;
+		rno=sc.nextInt() ;
+		System.out.println("enter the semester:\n") ;
+		sem=sc.nextInt() ;
+	}
+}
+class Exam extends Student
+{
+	int marks1,marks2 ;
+	float avg=(marks1+marks2)/2 ;
+	void input1()
+	{
+		System.out.println("enter the marks in sub1:\n") ;
+		marks1=sc.nextInt() ;
+		marks2=sc.nextInt() ;
+	}
+	
+	void display()
+	{
+		System.out.println("topper is: "+name+"\n") ;
+	}
+}
+class Person
+{
+	public static void main(String args[])
+	{
+		int n ;
+		Scanner sc1=new Scanner(System.in) ;
+		System.out.println("enter the number of students\n") ;
+		n=sc1.nextInt() ;
+		Exam arr[]=new Exam[n] ;
+		for(int x=0;x<n;x++)
+		{
+			arr[i]=new Exam() ;
+		}
+		for(int x=0;x<n;x++)
+		{
+			arr[i].input() ;
+			arr[i].input0() ;
+			arr[i].input1() ;
+		}
+	}
+}
+		
