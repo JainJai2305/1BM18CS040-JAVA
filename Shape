@@ -1,0 +1,82 @@
+import java.util.* ;
+abstract class Shap
+{
+	abstract void printarea() ;
+}
+class Rectangle extends Shap
+{
+	int a,b ;
+	float area ;
+	Rectangle(int x,int y)
+	{
+		a=x ;
+		b=y ;
+	}
+	void printarea()
+	{
+		area=a*b ;
+		System.out.println("the area is "+area+"\n") ;
+	}
+}
+class Triangle extends Shap
+{
+	int a,b ;
+	float area ;
+	Triangle(int x,int y)
+	{
+		a=x ;
+		b=y ;
+	}
+	void printarea()
+	{
+		area=(float)(a*b)/2 ;
+		System.out.println("the area is "+area+"\n") ;
+	}
+}
+class Circle extends Shap
+{
+	int r ;
+	float area ;
+	Circle(int x)
+	{
+		r=x ;
+	}
+	void printarea()
+	{
+		area=(float) (22.0*r*r)/7 ;
+		System.out.println("the area is "+area+"\n") ;
+	}
+}
+class Shape
+{
+	public static void main(String args[]) 
+	{
+		int ch,a,b ;
+		Scanner sc =new Scanner(System.in) ;
+		System.out.println("enter your chioce 1 for rectangle 2 for triangle 3 for circle \n") ;
+		ch=sc.nextInt() ;
+		if(ch==1)
+		{
+			System.out.println("enter length and breadth of the rectangle \n") ;
+			a=sc.nextInt() ;
+			b=sc.nextInt() ;
+			Rectangle ob=new Rectangle(a,b) ;
+			ob.printarea() ;
+		}
+		else if(ch==2)
+		{
+			System.out.println("enter height and base of the triangle \n") ;
+			a=sc.nextInt() ;
+			b=sc.nextInt() ;
+			Triangle ob=new Triangle(a,b) ;
+			ob.printarea() ;
+		}
+		else if(ch==3)
+		{
+			System.out.println("enter the radius of the circle \n") ;
+			a=sc.nextInt() ;
+			Circle ob=new Circle(a) ;
+			ob.printarea() ;
+		}
+	}
+}
