@@ -1,0 +1,77 @@
+import java.util.* ;
+interface Stac
+{
+	void push(int a) ;
+	int pop() ;
+	void display() ;
+}
+class Stak implements Stac
+{
+	int top=0,n,size=10 ;
+	int arr[]=new int[size] ;
+	int temp[] ;
+	public void push(int a)
+	{
+		if(top>=size)
+		{
+			size=size*2 ;
+			temp=new int[size] ;
+			for(int i=0;i<size/2;i++)
+			{
+				temp[i]=arr[i] ;
+			}
+			arr=temp ;	
+		}
+		arr[top]=a ;
+		top++ ;
+	}
+	public int pop()
+	{
+		if(top<=0)
+		{ 
+			System.out.println("stack underflow\n") ;
+			return -999 ;
+		}
+		top-- ;
+		n=arr[top] ;
+		top-- ;
+		return n ;
+	}
+	public void display()
+	{
+		if(top==0)
+			{System.out.println("Stack is empty");}
+		for(int x=top-1;x>=0;x--)
+		{
+			System.out.println(arr[x]+"\n") ;
+		}
+	}
+}
+class Stack
+{	public static void main(String args[])
+{
+	Scanner sc=new Scanner(System.in) ;
+	Stac ob= new Stak() ;
+	int ch=0,e ;
+	while(ch!=4)
+	{
+		System.out.println("press 1 for push 2 for pop 3 for display 4 to exit\n") ;
+		ch=sc.nextInt() ;
+		if(ch==1)
+		{
+			System.out.println("enter the element to be pushed\n") ;
+			e=sc.nextInt() ;
+			ob.push(e) ;
+		}
+		if(ch==2)
+		{
+			e=ob.pop() ;
+			System.out.println("element "+e+" ispopped\n") ;
+		}
+		if(ch==3)
+		{
+			ob.display() ;
+		}
+	}
+}
+}
