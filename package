@@ -1,0 +1,30 @@
+package  Cie ;
+import java.util.* ;
+
+public class Student
+{
+	String usn ;String name ;int sem  ;
+}
+interface Internals 
+{
+	 void marksinput( int ciemarks[]) ;
+}
+\\ inside another package
+package See ;
+import Cie.* ;
+import java.util.* ;
+
+
+public class External extends Student
+{
+	int seemarks[]=new int[5] ;
+}
+\\ inside the main file
+import see.* ;
+import java.util.* ;
+class Total implements internals
+{
+	 void marksinput( int ciemarks[]) 
+	 {
+	 	
+	 }
